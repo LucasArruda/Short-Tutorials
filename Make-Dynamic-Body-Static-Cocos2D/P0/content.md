@@ -47,7 +47,7 @@ Through the header we imported earlier we have access to the *ChipmunkSpace* of 
 
 The *key* value you pass into the callback is used to ensure that the callback is only called once. This is especially important when removing objects, but it also makes sense in this case, because we don't want to change the body type multiple times.
 
-	     With this implementation penguins get stuck to surfaces (or in the air, when the ice blocks fall to the ground) when they collide intensely with other physics objects:
+With this implementation penguins get stuck to surfaces (or in the air, when the ice blocks fall to the ground) when they collide intensely with other physics objects:
 
 ![](https://static.makegameswith.us/gamernews_images/ZbmHu2m5fA/iOS Simulator Screen shot 06 Feb 2014 07.38.08.png)
 

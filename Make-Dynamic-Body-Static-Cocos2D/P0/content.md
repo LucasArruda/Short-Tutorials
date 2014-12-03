@@ -53,10 +53,6 @@ The *key* value you pass into the callback is used to ensure that the callback i
 
 You can check out the implementation on [GitHub](https://github.com/MakeGamesWithUs/Spritebuilder-Getting-Started/tree/change-chipmunk-bodytype)!
 
-	     Happy coding!
+Happy coding!
 
 benji@makegameswith.us
-
-            <div>
-
-            </div>

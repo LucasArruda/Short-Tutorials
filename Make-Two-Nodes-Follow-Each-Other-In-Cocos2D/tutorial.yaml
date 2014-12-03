@@ -1,0 +1,4 @@
+title: Make two nodes follow each other in Cocos2D
+cover: cover.png
+teaser_text: |
+    Learn how to use the new CCActionMoveToNode that gives you an easy way to make two Nodes follow each other

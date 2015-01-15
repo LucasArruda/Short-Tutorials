@@ -37,4 +37,4 @@ If you have any issues with this - please don't hesitate to contact me: benji@ma
 
 Happy Coding!
 
-*You want to learn how to build and ship your own iPhone game? You want to gain industry relevant skills? Join us next summer @ the [MGWU Summer Academy](https://www.makegameswith.us/summer-academy/)!*
+*You want to learn how to build and ship your own iPhone game? You want to gain industry relevant skills? Join us next summer @ the [MakeSchool Summer Academy](https://www.makeschool.com/summer-academy)!*

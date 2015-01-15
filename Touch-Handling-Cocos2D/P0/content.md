@@ -18,7 +18,7 @@ Get started by downloading the [starter project](https://s3.amazonaws.com/mgwu-m
 
 # Note for Cocos2D 3.3
 
-If you are using Cocos2D 3.3 (it's part of SpriteBuilder 1.3) you will have to replace all occurrences of *UITouch* and *UITouchEvent* with *CCTouch* and *CCTouchEvent*, respectively. You can find more information as part of the [SpriteBuilder update guide](http://www.spritebuilder.com/update). <span style=""></span>
+If you are using Cocos2D 3.3 (it's part of SpriteBuilder 1.3) you will have to replace all occurrences of *UITouch* and *UITouchEvent* with *CCTouch* and *CCTouchEvent*, respectively. You can find more information as part of the [SpriteBuilder update guide](http://www.spritebuilder.com/update).
 
 # Accepting touches
 
@@ -75,7 +75,7 @@ The most interesting part of a touch is it's location. In the next step we're go
 
 This implementation is very straightforward. The most interesting part is retrieving the actual location of the touch. The *locationInNode* method transforms a touch position on the OpenGL view into a touch position within the Node that you provide as parameter (in this case *self*, because we want to know the location of the touch in the *MainScene*). Once we have the touch position we simply create a new *CCSprite* and add it to the *MainScene*. The asset 'hero.png' is part of the starter project you downloaded at the beginning of this tutorial.
 
-	            Once you run your project you should be able to place MGWU heroes all over the screen:
+Once you run your project you should be able to place MGWU heroes all over the screen:
 
 ![](https://static.makegameswith.us/gamernews_images/6WM18bmGe7/iOS Simulator Screen shot 04 Feb 2014 14.13.38.png)
 
@@ -102,20 +102,20 @@ Our new hero placing algorithm shall work as following:
 
 First of all we need a variable that holds a reference to the hero we are currently moving, therefore we will add a private instance variable. Modify your *MainScene.m* file.
 
-<span style="">Replace this code:</span>
+Replace this code:
 
     @implementation MainScene
 
-<span style="">With this code:</span>
+With this code:
 
     @implementation MainScene {
         // this is the section to place private instance variables!
         CCSprite *currentHero;
     }
 
-<span style="">Now we have a new private variable. This variable shall always hold a reference to the hero we are currently dragging so that we can update his position when a touch moves across the screen. Let's begin by assigning this variable in the *touchBegan* method.</span>
+Now we have a new private variable. This variable shall always hold a reference to the hero we are currently dragging so that we can update his position when a touch moves across the screen. Let's begin by assigning this variable in the *touchBegan* method.</span>
 
-<span style="">Replace this code:</span>
+Replace this code:
 
     // create a 'hero' sprite
     CCSprite *hero = [CCSprite spriteWithImageNamed:@"hero.png"];
@@ -221,8 +221,4 @@ Well done! By now you should know enough about touch handling in Cocos2d 3.0 to 
 
 As always feel free to contact me with any questions or feedback.
 
-benji@makegameswith.us
-
-            <div>
-
-            </div>
+benji@makeschool.com

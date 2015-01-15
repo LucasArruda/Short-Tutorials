@@ -5,9 +5,9 @@ slug: dynamic-body-static-cocos2d
 
 Inspired by this interesting [question on StackOverflow](http://stackoverflow.com/questions/21593519/how-to-make-a-dynamic-body-static-in-cocos2d-v3-0-with-chipmunk/21606421#21606421) I want to show you a short example how to work with advanced physics features in Cocos2d 3.0. This will give you an idea of what can be done with the new integrated physics engine *Chipmunk*.
 
-## <span style="">Q: How can I turn a dynamic physics body into a static body upon collision, to make the object stick to a surface?</span>
+## Q: How can I turn a dynamic physics body into a static body upon collision, to make the object stick to a surface?</span>
 
- <span style="">    1. Import a new header file</span>
+##1. Import a new header file
 
 First of all it is important to know, that not all Chimpunk features are exposed through Cocos2d classes like *CCPhysicsNode* and *CCPhysicsBody*. For some more advanced features you need to use the actual [Objective-Chipmunk API](https://chipmunk-physics.net/release/Chipmunk-5.x/Objective-Chipmunk-5.3.5-Docs/index.html).
 
@@ -15,7 +15,7 @@ In Cocos2d 3.0 you need to import a special header to get access to the underlyi
 
     #import "CCPhysics+ObjectiveChipmunk.h"
 
-## <span style="">2. Add a post-step callback</span>
+##2. Add a post-step callback</span>
 
 As the StackOverflow question states, it is not simply possible to change the bodyType from dynamic to static in the collision handler. The problem is, that the collision handler is called while Chipmunk is calculating a physics *step*. During a calculation of a *step* collisions are resolved and objects are moved around. Chipmunk locks the Chipmunk Space of the *CCPhysicsNode* during this calculation because changing the body or removing objects while calculating the impact of collisions can result in unexpected behaviour.
 

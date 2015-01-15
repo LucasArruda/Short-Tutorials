@@ -40,8 +40,4 @@ Checkout the code on [GitHub](https://github.com/MakeGamesWithUs/CCActionMoveToN
 
 Have fun with it!
 
-benji@makegameswith.us
-
-            <div>
-
-            </div>
+benji@makeschool.com

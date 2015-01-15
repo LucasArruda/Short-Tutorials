@@ -41,13 +41,14 @@ As of today Apple has sold approximately 170 million iPads (Oct. 2013). While th
 
 *   Once you decide that your game should be a universal game, you should use relative positioning and relative sizing as much as you can. The basic idea is to express sizes of objects in relation to sizes of parent layers/scenes instead of using fixed numbers. Some examples:
 
-        *   A Button that shall be as wide as the layer and have a left and a right margin of 5 pixels:
+*   A Button that shall be as wide as the layer and have a left and a right margin of 5 pixels:
 
-            myButton.size = CGSizeMake(self.contentSize.width -10, 40);
+        myButton.size = CGSizeMake(self.contentSize.width -10, 40);
 
-        *   You want to display a sprite on the top right screen of the corner:
+*   You want to display a sprite on the top right screen of the corner:
 
-            mySprite.position = ccp(self.contentSize.width - mySprite.contentSize.width, self.contentSize.height - mySprite.contentSize.height);
+        mySprite.position = ccp(self.contentSize.width - mySprite.contentSize.width, 		self.contentSize.height - mySprite.contentSize.height);
+        
 *   Using iPad specific images: once you decide to build an iPad version of your game, we will provide *-ipad.png* and *-ipad-hd.png* images for you. You can drop these images into your project and cocos2D will use these assets when running on an iPad.
 
 Now you can start building a great iPad version of your game! If you need any additional help, please drop me a line at: [benji@makegameswith.us](mailto:benji@makegameswith.us)

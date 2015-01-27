@@ -18,7 +18,7 @@ Get started by downloading the [starter project](https://s3.amazonaws.com/mgwu-m
 
 # Note for Cocos2D 3.3
 
-If you are using Cocos2D 3.3 (it's part of SpriteBuilder 1.3) you will have to replace all occurrences of *UITouch* and *UITouchEvent* with *CCTouch* and *CCTouchEvent*, respectively. You can find more information as part of the [SpriteBuilder update guide](http://www.spritebuilder.com/update).
+If you are using Cocos2D 3.3+ (it's part of SpriteBuilder 1.3+) you will have to replace all occurrences of *UITouch* and *UITouchEvent* with *CCTouch* and *CCTouchEvent*, respectively. You can find more information as part of the [SpriteBuilder update guide](http://www.spritebuilder.com/update).
 
 # Accepting touches
 

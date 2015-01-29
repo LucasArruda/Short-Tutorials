@@ -1,7 +1,7 @@
 ---
 title: Heyzap SDK
 slug: heyzap-sdk
----            
+---
 
 Introducing Heyzap
 ====================

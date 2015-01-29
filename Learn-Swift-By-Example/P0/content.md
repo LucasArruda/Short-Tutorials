@@ -1,4 +1,8 @@
-            
+---
+title: Learn Swift by Example
+slug: p1
+gamernews_id: 403
+---
 
 #1. Sample project: RedditSwift
 

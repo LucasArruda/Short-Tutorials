@@ -1,6 +1,7 @@
 ---
 title: Touch Handling in Cocos2D 3.x
 slug: touch-handling-cocos2d-3
+gamernews_id: 366
 ---            
 
 Cocos2d 3.0 comes with a completely overhauled touch handling system. This tutorial will provide you with all relevant information about working with touches:

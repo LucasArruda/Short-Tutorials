@@ -22,7 +22,7 @@ And here is how it looks in our demo project after applying a *CCEffectPixelate*
 
 Here's the code for the example above, and it is amazingly simple:
 
-        _spaceship.effect = [CCEffectPixellate effectWithBlockSize: 5];
+    _spaceship.effect = [CCEffectPixellate effectWithBlockSize: 5];
 
 That's it. With *CCEffectPixellate* you can now create retro effects for your game in one line of code.
 
@@ -38,7 +38,7 @@ You can clearly see how the refraction and the reflection of the background adds
 
 Creating a glass effect is definitely more complicated then adding pixellation to your game but it still can be done in a few lines of code:
 
-        CCSpriteFrame *normalMap = [CCSpriteFrame frameWithImageNamed:@"crystals/normalmaps/crystal-1-normal.png"];
+    CCSpriteFrame *normalMap = [CCSpriteFrame frameWithImageNamed:@"crystals/normalmaps/crystal-1-normal.png"];
         CCEffectGlass *glassEffect = [CCEffectGlass effectWithRefraction:0.1f refractionEnvironment:_background reflectionEnvironment:_background normalMap:normalMap];
         _crystal.effect = glassEffect;
 
@@ -91,7 +91,3 @@ The *CCEffects* you have seen so far are really amazing and will make it easy to
 The demo project discussed throughout this post is available on [GitHub](https://github.com/MakeGamesWithUs/CCEffectsDemo). Feel free to download it and play around with all *CCEffects*.
 
 We are looking forward to awesome looking Cocos2D games! Stay tuned for the full tutorial on *CCEffects*!
-
-            <div>
-
-            </div>

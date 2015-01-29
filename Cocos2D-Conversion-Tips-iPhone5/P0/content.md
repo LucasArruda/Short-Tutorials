@@ -1,6 +1,7 @@
 ---
 title: Cocos2D iPhone5 Conversion Tips
 slug: cocos2d-conversion-tips-iphone5
+gamernews_id: 336
 ---            
 
 Looking to convert your cocos2d game to the iPhone 5? Read on!

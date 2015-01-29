@@ -1,6 +1,7 @@
 ---
 title: Make a dynamic body static in Cocos2D
 slug: dynamic-body-static-cocos2d
+gamernews_id: 367
 ---            
 
 Inspired by this interesting [question on StackOverflow](http://stackoverflow.com/questions/21593519/how-to-make-a-dynamic-body-static-in-cocos2d-v3-0-with-chipmunk/21606421#21606421) I want to show you a short example how to work with advanced physics features in Cocos2d 3.0. This will give you an idea of what can be done with the new integrated physics engine *Chipmunk*.

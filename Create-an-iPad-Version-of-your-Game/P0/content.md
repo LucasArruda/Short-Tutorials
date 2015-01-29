@@ -1,6 +1,7 @@
 ---
 title: How to create an iPad version of your iPhone game
 slug: create-an-ipad-version-of-your-iphone-game
+gamernews_id: 291
 ---            
 
 As of today Apple has sold approximately 170 million iPads (Oct. 2013). While this number is lower then the over 250 million iPhones (Jun. 2013) Apple has been able to place in customers hands, it is out of question that developers building apps solely for the mobile phone are neglecting a huge amount of potential customers. Apple incentivizes iOS applications built for the iPad by ranking them higher on the iPad App Store search results which can be very important for games with a small marketing budget.

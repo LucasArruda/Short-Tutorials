@@ -1,6 +1,7 @@
 ---
 title: Animate a Sprite in Cocos2D
 slug: animate-sprite-cocos2d
+gamernews_id: 331
 ---     
 
 # The old way

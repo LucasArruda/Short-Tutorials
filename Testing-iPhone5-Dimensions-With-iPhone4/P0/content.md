@@ -1,6 +1,7 @@
 ---
 title: Testing iPhone 4 dimensions on an iPhone 5
 slug: testing-iphone-4-dimensions-on-an-iphone-5
+gamernews_id: 293
 ---            
 
 A lot of us iOS game developers have switched to the iPhone 5 / iPhone 5S / iPhone 5C, however there are still a lot old devices on the market only supporting the 320x480 screen size. Thus we are still building games that support these old dimensions.

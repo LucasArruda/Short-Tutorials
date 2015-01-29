@@ -1,4 +1,5 @@
-title: Create an iPad Version of Your Game
+title: SpriteBuilder 1.1 and Cocos2D 3.1 are on their way!
 cover: cover.png
 teaser_text: |
-    Do you want to convert your iPhone game so that it's iPad compatible?
+    Interesting updates in the new versions of SpriteBuilder and Cocos2D. 
+    Cocos2D comes with a new renderer that supports automatic batching!

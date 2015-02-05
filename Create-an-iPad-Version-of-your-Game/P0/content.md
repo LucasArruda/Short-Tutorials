@@ -37,8 +37,8 @@ As of today Apple has sold approximately 170 million iPads (Oct. 2013). While th
 *   If you want to run different code, if someone is using an iPad (such as loading a different level) you can use this code snippet, to detect iPads:
 
         if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-    // run iPad specific code here
-    }
+          // run iPad specific code here
+        }
 
 *   Once you decide that your game should be a universal game, you should use relative positioning and relative sizing as much as you can. The basic idea is to express sizes of objects in relation to sizes of parent layers/scenes instead of using fixed numbers. Some examples:
 
@@ -52,4 +52,4 @@ As of today Apple has sold approximately 170 million iPads (Oct. 2013). While th
         
 *   Using iPad specific images: once you decide to build an iPad version of your game, we will provide *-ipad.png* and *-ipad-hd.png* images for you. You can drop these images into your project and cocos2D will use these assets when running on an iPad.
 
-Now you can start building a great iPad version of your game! If you need any additional help, please drop me a line at: [benji@makegameswith.us](mailto:benji@makegameswith.us)
+Now you can start building a great iPad version of your game! If you need any additional help, please drop me a line at: [benji@makeschool.com](mailto:benji@makeschool.com)

@@ -29,7 +29,6 @@ There are several possible strategies:
     ![](https://static.makegameswith.us/gamernews_images/garTldNyBF/iphone5conversion.png)
 
 *   Use an if statement to detect the type of device and select one of two background images.
-
     This simple if-statement should work:
 
     	CGSize winSize = [CCDirector sharedDirector].winSize;
@@ -57,9 +56,9 @@ One method is to position objects relative to the window size, rather than posit
 
     	 CGSize winSize = [CCDirector sharedDirector].winSize;
 
-    	   button.position = ccp (winSize.width - 40, winSize.height - 40);
+    	 button.position = ccp (winSize.width - 40, winSize.height - 40);
 
-    	   //actual Retina pixels = 80
+    	 //actual Retina pixels = 80
 
     ![](https://static.makegameswith.us/gamernews_images/CSNJwLQ6vJ/iphone5conversion_3.png)
 
@@ -71,7 +70,7 @@ One method is to position objects relative to the window size, rather than posit
 	Your new code would then look like this:
 
     	CGSize winSize = [CCDirector sharedDirector].winSize;
-    	//only set this variable once in your method/class
+        //only set this variable once in your method/class
 
     	sprite.position = ccp (winSize.width * 0.375, 200); //y-coords are unchanged
 

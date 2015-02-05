@@ -34,7 +34,7 @@ You have to remove the iPhone 5 launch image. That will force your app to run in
 
 7.  Once you are done, add the "Default-568h@2x.png" to your project again.
 
-If you have any issues with this - please don't hesitate to contact me: benji@makegameswith.us
+If you have any issues with this - please don't hesitate to contact me: benji@makeschool.com
 
 Happy Coding!
 

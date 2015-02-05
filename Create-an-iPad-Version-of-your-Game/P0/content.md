@@ -48,7 +48,7 @@ As of today Apple has sold approximately 170 million iPads (Oct. 2013). While th
 
 *   You want to display a sprite on the top right screen of the corner:
 
-        mySprite.position = ccp(self.contentSize.width - mySprite.contentSize.width, 		self.contentSize.height - mySprite.contentSize.height);
+        mySprite.position = ccp(self.contentSize.width - mySprite.contentSize.width, self.contentSize.height - mySprite.contentSize.height);
         
 *   Using iPad specific images: once you decide to build an iPad version of your game, we will provide *-ipad.png* and *-ipad-hd.png* images for you. You can drop these images into your project and cocos2D will use these assets when running on an iPad.
 

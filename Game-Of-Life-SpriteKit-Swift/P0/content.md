@@ -4,7 +4,7 @@ slug: p1
 gamernews_id: 399
 ---
 
-In this tutorial, you will learn to develop Conway’s Game of Life using the new iOS programming language, Swift, and the SpriteKit game engine. This is a Swift version of the Game of Life tutorial, which can be found at [https://www.makegameswith.us/curriculum/game-of-life-spritebuilder/](https://www.makegameswith.us/curriculum/game-of-life-spritebuilder/). If you are unfamiliar with the game check out [the Wikipedia article](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) to learn more.
+In this tutorial, you will learn to develop Conway’s Game of Life using the new iOS programming language, Swift, and the SpriteKit game engine. This is a Swift version of the Game of Life tutorial, which can be found at [https://www.makeschool.com/tutorials/game-of-life-spritebuilder/](https://www.makeschool.com/tutorials/game-of-life-spritebuilder/what-game-of-life). If you are unfamiliar with the game check out [the Wikipedia article](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) to learn more.
 
 ![](./swift-game-of-life-tutorial-sprite-kit-6.png)
 

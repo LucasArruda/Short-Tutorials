@@ -2,11 +2,11 @@
 title: Make two nodes follow each other in Cocos2D
 slug: make-two-nodes-follow-each-other-cocos2d
 gamernews_id: 365
----            
+---
 
 Many games require two objects to follow each other, or one object moving to a moving target. Until now you had to implement this mechanism manually. Today we're releasing a new CCAction for Cocos2d 3.0 that makes this a lot simpler, **CCActionMoveToNode:**
 
-![](https://static.makegameswith.us/gamernews_images/ku2p3b2C4g/ActionFollowMovingTut.gif)
+![](./ActionFollowMovingTut.gif)
 
 # Usage
 
@@ -37,7 +37,7 @@ Many games require two objects to follow each other, or one object moving to a m
 
 # A lot more options!
 
-Checkout the code on [GitHub](https://github.com/MakeGamesWithUs/CCActionMoveToNode). It contains many tests with all kinds of examples how this API can be used.
+Checkout the code on [GitHub](https://github.com/MakeSchool/CCActionMoveToNode). It contains many tests with all kinds of examples how this API can be used.
 
 Have fun with it!
 

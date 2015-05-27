@@ -15,7 +15,7 @@ Making an Account
 ====================
 First things first, you'll need to [make an account with Heyzap](https://www.heyzap.com/register?next=https://developers.heyzap.com/dashboard). Sign up with an account to "Monetize apps."
 
-![Make an Account](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/MakeAnAccount.png)
+![Make an Account](./MakeAnAccount.png)
 
 You do not need to include a URL to your game.
 
@@ -32,7 +32,7 @@ If your app is already in the App Store, you can find your Apple ID with the fol
 3. Click on the icon of the application you want to add.
 4. The Apple ID should be listed on the page.
 
-	![Apple ID](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/AppleID.png)
+	![Apple ID](./AppleID.png)
 
 Once you have found your Apple ID, [claim your app here](https://developers.heyzap.com/dashboard/games/add_game).
 
@@ -44,13 +44,13 @@ You can do this even if your app has not yet been published to the App Store, by
 1. Log in to [the iTunesConnect website](https://itunesconnect.apple.com/).
 2. Click on "[My Apps](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app)."
 3. In the upper left hand corner, click on the ```+``` button to make a new app.
- 
+
 	![Make a New App](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/AddNewApp.png)
 
 4. Fill out the required information and hit "Create."
-5. The Apple ID will be listed on the next page. 
+5. The Apple ID will be listed on the next page.
 
-	![Apple ID](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/AppleID.png)
+	![Apple ID](./AppleID.png)
 
 Once you have your Apple ID, [claim your app here](https://developers.heyzap.com/dashboard/games/add_game).
 
@@ -58,17 +58,17 @@ Adding the Framework
 ====================
 Download the Heyzap SDK by [clicking here](https://developers.heyzap.com/sdk/download?platform=iphone).
 
-Unzip the download and navigate to the ```ios-sdk``` folder. In your Xcode project, drag the framework under the Frameworks folder in Xcode project navigator. 
+Unzip the download and navigate to the ```ios-sdk``` folder. In your Xcode project, drag the framework under the Frameworks folder in Xcode project navigator.
 
-![Add Frameworks](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/AddFrameworks.png "AddFrameworks")
+![Add Frameworks](./AddFrameworks.png "AddFrameworks")
 
 Be sure ```Copy items if needed``` and ```Add to targets``` are checked.
 
-![Copy Items if Needed](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/CopyIfNeeded.png "CopyItems")
+![Copy Items if Needed](./CopyIfNeeded.png "CopyItems")
 
 In the app's ```Build Settings```, use the search bar to search for ```modules```. Set ```Enable Modules (C and Objective-C)``` to ```Yes```.
 
-![Enable Modules](https://s3.amazonaws.com/mgwu-misc/Heyzap+Tutorial/BuildSettingsModules.png "EnableModules")
+![Enable Modules](./BuildSettingsModules.png "EnableModules")
 
 Finally, navigate to the ```AppDelegate.m``` file, and add the following semantic import statements:
 
@@ -83,19 +83,19 @@ Initializing the SDK
 In the ```AppDelegate.m``` file, add the following import line:
 
 	#import <HeyzapAds/HeyzapAds.h>
-	
 
-In the ```application: didFinishLaunchingWithOptions:``` method (in ```AppDelegate.m```), you need to start the Heyzap SDK with ***your personal Publisher ID***. 
+
+In the ```application: didFinishLaunchingWithOptions:``` method (in ```AppDelegate.m```), you need to start the Heyzap SDK with ***your personal Publisher ID***.
 
 You can find your Publisher ID under your[ Account at Heyzap](https://developers.heyzap.com/account). Add the line ```[HeyzapAds startWithPublisherID: @"YOUR PUBLISHER ID HERE"];```. This is what the method will look like -- but replace the zeros with **your Publisher ID**:
 
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 	{
     	[HeyzapAds startWithPublisherID: @"00000000000000000000000000000000"];
-    	
+
     	...
 
-Build your app before going on, to check for any compiler errors. 
+Build your app before going on, to check for any compiler errors.
 
 
 Displaying Interstitial Ads
@@ -109,17 +109,17 @@ In Xcode, open the ```.m``` file of the scene where you will be triggering the a
 Now, all you have to do to trigger the ad is the line:
 
 	[HZInterstitialAd show];
-	
+
 That's it! The ad is automatically fetched from their server, and gameplay will resume as normal once the user exits out of the advertisement. It will take approximately 5 minutes and 10 impressions before it moves out of "test mode" and beings to display real ads.
-	
+
 
 Displaying Video Ads
 ====================
-The ```HZInterstitialAd``` class will show both interstitial ads and video ads, depending on which ad is selected by Heyzap's algorithm at the time of showing. This is the recommended option. 
+The ```HZInterstitialAd``` class will show both interstitial ads and video ads, depending on which ad is selected by Heyzap's algorithm at the time of showing. This is the recommended option.
 
 However, if you want to force a video ad, you can use the ```HZVideoAd``` class instead. Video ads are best shown only when you expect user sessions to be long. Taking up to 30 seconds away from a 2-5 minute session is a substantial amount of time to ask of users.
 
-If you are forcing a video ad, you need to make sure there is one queued up. This should be done as early as possible in the app's lifecycle, using the command ```[HZVideoAd fetch];``` and also every time after a video ad is shown, to allow as much time as possible to download the necessary assets. 
+If you are forcing a video ad, you need to make sure there is one queued up. This should be done as early as possible in the app's lifecycle, using the command ```[HZVideoAd fetch];``` and also every time after a video ad is shown, to allow as much time as possible to download the necessary assets.
 
 In your ```AppDelegate.m```, after the line where you started the SDK, add the ```fetch``` method call. Here is what it should look like now (with the zeros replaced, of course):
 
@@ -128,7 +128,7 @@ In your ```AppDelegate.m```, after the line where you started the SDK, add the `
     	[HeyzapAds startWithPublisherID: @"00000000000000000000000000000000"];
     	[HZVideoAd fetch];
     	...
-    	
+
 You can now use the lines:
 
 	[HZVideoAd show];
@@ -145,11 +145,11 @@ One thing to note is that while the advertisements will pause your update loops 
 Best Practices for Cocos2D
 =========
 
-In general, accidental clicks will only succeed in annoying your users, not in raising conversion rates. You will only make money if the user decides they want to download the advertised app, so when a user accidentally clicks on an advertisement that they have no interest in downloading, you have navigated them away from your game for no reason. 
+In general, accidental clicks will only succeed in annoying your users, not in raising conversion rates. You will only make money if the user decides they want to download the advertised app, so when a user accidentally clicks on an advertisement that they have no interest in downloading, you have navigated them away from your game for no reason.
 
-Users are much more likely to click on an ad after a game has ended than before it started, because they have just finished a task and won't mind as much navigating away from the app. 
+Users are much more likely to click on an ad after a game has ended than before it started, because they have just finished a task and won't mind as much navigating away from the app.
 
-The examples below assume you are using Cocos2D, but also parallel SpriteKit closely. ```replaceScene``` and ```presentScene``` are effectively the same thing. 
+The examples below assume you are using Cocos2D, but also parallel SpriteKit closely. ```replaceScene``` and ```presentScene``` are effectively the same thing.
 
 
 #### When to show ads
@@ -162,7 +162,7 @@ If you reset the game after a "Game Over" by calling ```[[CCDirector sharedDirec
 	[self scheduleBlock:^(CCTimer *timer) {
     	[HZInterstitialAd show];
     } delay:2.0];
-   
+
 If the user presses the **Restart** button before the ad appears, then the ```self``` is destroyed, removing all associated scheduled blocks. No ad will be shown if they hit restart before 2 seconds have passed. This is because ```replaceScene``` creates a new instance of ```self```, and ARC deallocates the old one.
 
 The automatic removal of scheduled blocks is important, because we don't want an ad showing up in the middle of a game. However, that also means that if the user is quick, we wouldn't be showing them any ads. In this case, we need to create a boolean that checks if we have displayed an ad. If they press the restart button before an ad is displayed, we will display the ad before starting the new game. Initialize a boolean instance variable ```BOOL adShown;```. Add the following to the ```scheduleBlock```:
@@ -172,15 +172,15 @@ The automatic removal of scheduled blocks is important, because we don't want an
     	[HZInterstitialAd show];
     	adShown = YES;
     } delay:2.0];
-    
+
 Then, just before you call ```replaceScene``` add this to check if you need to show an ad:
-	
+
 	if (!adShown) {
 		[HZInterstitialAd show];
 	}
-	
+
 ######If your restart does not create a new instance of Gameplay Scene
-That technique *will not work* if you restart the game without creating a new instance of the ```self```, since after the 2 second delay, the self will still have the block scheduled. If the **Restart** button were pressed before the 2 second delay had expired, an ad would pop up in the middle of the game. We need to make sure that the call to ```HZInterstitialAd``` has been unscheduled before restarting the game. Since this is not possible to do with a schedule block, we need to schedule a selector. 
+That technique *will not work* if you restart the game without creating a new instance of the ```self```, since after the 2 second delay, the self will still have the block scheduled. If the **Restart** button were pressed before the 2 second delay had expired, an ad would pop up in the middle of the game. We need to make sure that the call to ```HZInterstitialAd``` has been unscheduled before restarting the game. Since this is not possible to do with a schedule block, we need to schedule a selector.
 
 We still need to initialize ```BOOL adShown;```. This time, we first create a new method called ```showAd```.
 
@@ -188,12 +188,12 @@ We still need to initialize ```BOOL adShown;```. This time, we first create a ne
 		[HZInterstitialAd];
 		adShown = YES;
 	}
-	
+
 Call that method in place of the schedule block that we used above using:
 
 	adShown = NO;
 	[self schedule:@selector(showAd) interval:2.0];
-	
+
 Now, add the following before where you restart the game:
 
 	if (!adShown) {
@@ -207,7 +207,7 @@ When to show the ad is best determined by analyzing analytics. If your game is a
 
 You want to minimize the disruption to the user experience, so the user continues to visit your app and does not get too annoyed.
 
-To keep track of how often you have shown ads, try [using a Singleton](https://www.makegameswith.us/tutorials/starting-your-game/singletons/).
+To keep track of how often you have shown ads, try [using a Singleton](http://en.wikipedia.org/wiki/Singleton_pattern).
 
 
 
@@ -218,7 +218,7 @@ Heyzap offers two types of video advertisements. There are ads that the user can
 
 These ads intrude more than usual on the user experience, so they are reserved for situations in which the user has an incentive to watch the video. You could offer the user a free hint or in-game currency if they agree to watch the ad.
 
-The theory behind this is that users are more likely to be interested in downloading an app if they are exposed to it more, so you're more likely to convert an ad view to a download if they have to watch a full advertisement. 
+The theory behind this is that users are more likely to be interested in downloading an app if they are exposed to it more, so you're more likely to convert an ad view to a download if they have to watch a full advertisement.
 
 Just as with the ```HZVideoAd``` class, you need to fetch the ```HZIncentivizedAd``` as early as possible. Add ```[HZIncentivizedAd fetch];``` after where you started the SDK in your ```AppDelegate.m```.
 
@@ -229,7 +229,7 @@ Before you pull up the scene offering the incentive, you should check to see if 
 	}
 
 Once you are ready to show the ad, you can show and fetch it with the same method as ```HZVideoAd```:
-	
+
 	-(void) offerIncentiveToWatchAd {
 		if (userAgreedToWatchAd) {
 			[self giveUser100Coins];
@@ -237,7 +237,7 @@ Once you are ready to show the ad, you can show and fetch it with the same metho
 			[HZIncentivizedAd fetch];
 		}
 	}
-	
-If no ad has been fetched successfully, no ad will show. That is why we check to make sure that something is available before displaying the offer (since it would not make sense to offer an incentive when there is no ad to show). 
+
+If no ad has been fetched successfully, no ad will show. That is why we check to make sure that something is available before displaying the offer (since it would not make sense to offer an incentive when there is no ad to show).
 
 Once you have seen a functioning Heyzap ad in your app, you are ready to submit to the App Store!

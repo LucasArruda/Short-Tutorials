@@ -2,11 +2,11 @@
 title: Build the Game of Life
 slug: p1
 gamernews_id: 399
----            
+---
 
 In this tutorial, you will learn to develop Conway’s Game of Life using the new iOS programming language, Swift, and the SpriteKit game engine. This is a Swift version of the Game of Life tutorial, which can be found at [https://www.makegameswith.us/curriculum/game-of-life-spritebuilder/](https://www.makegameswith.us/curriculum/game-of-life-spritebuilder/). If you are unfamiliar with the game check out [the Wikipedia article](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) to learn more.
 
-![](https://static.makegameswith.us/gamernews_images/MTRXNVNqUa/swift-game-of-life-tutorial-sprite-kit-6.png)
+![](./swift-game-of-life-tutorial-sprite-kit-6.png)
 
 ## Set up the project
 
@@ -18,7 +18,7 @@ Run the project to make sure you don't get any compiler errors.
 
 Now open GameScene.sks, and go to View —&gt; Utilities —&gt; “Show SKNode Inspector” to edit the properties of the scene. Set the size to X:568, Y:320, so that the scene fits perfectly on an iPhone 5 device. Save the file.
 
-## 
+##
 
 ## Add the static user interface
 
@@ -54,7 +54,7 @@ Also note how we initialize a new SKSpriteNode simply by writing *SKSpriteNode(i
 
 If you run the project on an iPhone 5 simulator, you should see:
 
-![](https://static.makegameswith.us/gamernews_images/GZtUH2BWAQ/swift-game-of-life-tutorial-sprite-kit-1.png)
+![](./swift-game-of-life-tutorial-sprite-kit-1.png)
 
 Now add another background image to appear behind the grid. Add this code to *didMoveToView:*
 
@@ -67,7 +67,7 @@ Now add another background image to appear behind the grid. Add this code to *di
 
 Run the project to see:
 
-![](https://static.makegameswith.us/gamernews_images/rjyybQvawV/swift-game-of-life-tutorial-sprite-kit-2.png)
+![](./swift-game-of-life-tutorial-sprite-kit-2.png)
 
 We’re going to finish up the user interface by adding a few more sprites and some labels on the left side of the screen.
 
@@ -123,7 +123,7 @@ Now add to *didMoveToView:*
 
 Your project should now display a full user interface, although you can’t interact with it yet:
 
-![](https://static.makegameswith.us/gamernews_images/x46AjLRB29/swift-game-of-life-tutorial-sprite-kit-3.png)
+![](./swift-game-of-life-tutorial-sprite-kit-3.png)
 
 ## Add the creature tiles
 
@@ -180,7 +180,7 @@ Note that our for-loops only use two periods in the ellipses ( 0.._numRows ), wh
 
 Run the project now. You should see creature tiles on every grid location.
 
-![](https://static.makegameswith.us/gamernews_images/IajkBBJlp1/swift-game-of-life-tutorial-sprite-kit-4.png)
+![](./swift-game-of-life-tutorial-sprite-kit-4.png)
 
 ##  Implement the player interactions
 
@@ -260,7 +260,7 @@ We get the selected tile (which may or may not be nil) by calling the method we 
 
 Run the program. Tapping a tile will cause it to appear or disappear with each touch:
 
-![](https://static.makegameswith.us/gamernews_images/eCI8cnxCdB/swift-game-of-life-tutorial-sprite-kit-5.png)
+![](./swift-game-of-life-tutorial-sprite-kit-5.png)
 
 We already added static button sprites to the scene at the beginning of the tutorial, but right now they don’t have any player interactions enabled. Let’s modify the *touchesBegan* method again to check for button taps.
 
@@ -364,7 +364,7 @@ Finally, add the *updateCreatures* method, which will determine which tiles are 
                     numAlive++
                 }
             }
-        }        
+        }
     }
 
 Run your project, and it should work!
@@ -431,6 +431,6 @@ The important lines are:
 
 Run your project, set up some creatures, and press play. Congratulations, you have successfully programmed your first Swift game!
 
-If you get stuck, you can find the full source code on [GitHub](https://github.com/Benolds/GameOfLife-Swift), and if you have any questions, feel free to comment here or contact *benjamin@makegameswith.us*
+If you get stuck, you can find the full source code on [GitHub](https://github.com/Benolds/GameOfLife-Swift), and if you have any questions, feel free to comment here or contact *benji@makeschool.com*
 
-![](https://static.makegameswith.us/gamernews_images/MTRXNVNqUa/swift-game-of-life-tutorial-sprite-kit-6.png)
+![](./swift-game-of-life-tutorial-sprite-kit-6.png)

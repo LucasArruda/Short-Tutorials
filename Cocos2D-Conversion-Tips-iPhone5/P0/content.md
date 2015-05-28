@@ -2,7 +2,7 @@
 title: Cocos2D iPhone5 Conversion Tips
 slug: cocos2d-conversion-tips-iphone5
 gamernews_id: 336
----            
+---
 
 Looking to convert your cocos2d game to the iPhone 5? Read on!
 
@@ -26,7 +26,7 @@ There are several possible strategies:
 
 *   Use a larger centered background image for all iPhone models. The image will run off the screen at the left and right sides for older iPhone models:
 
-    ![](https://static.makegameswith.us/gamernews_images/garTldNyBF/iphone5conversion.png)
+    ![](./iphone5conversion.png)
 
 *   Use an if statement to detect the type of device and select one of two background images.
     This simple if-statement should work:
@@ -39,7 +39,7 @@ There are several possible strategies:
 
 *   Use a normal centered background image (960 x 640 pixels for retina). Then use two separate images to fill in the left and right sides if the device is not an iPhone 5.
 
-    ![](https://static.makegameswith.us/gamernews_images/ZgGZ3To7Gv/iphone5conversion_2.png)
+    ![](./iphone5conversion_2.png)
 
 For scrolling backgrounds, there are two possible solutions:
 
@@ -60,12 +60,12 @@ One method is to position objects relative to the window size, rather than posit
 
     	 //actual Retina pixels = 80
 
-    ![](https://static.makegameswith.us/gamernews_images/CSNJwLQ6vJ/iphone5conversion_3.png)
+    ![](./iphone5conversion_3.png)
 
 *   For elements in the center of the screen (not UI elements), you can use a scaling factor for whichever coordinate varies between iPhone 4 and iPhone 5 (i.e. the x coordinate for the landscape orientation).
 	For example, if a sprite is normally positioned at (180, 200) for older versions of the iPhone, then what you first do is find the ratio of the old x-coordinate to the old screen width (in cocos2d coordinates). For example, 180/480 = 0.375. In other words, our sprite’s relative y position is 37.5% of the screen width.
 
-    ![](https://static.makegameswith.us/gamernews_images/xhmTfdWAMd/iphone5conversion_4.png)
+    ![](./iphone5conversion_4.png)
 
 	Your new code would then look like this:
 

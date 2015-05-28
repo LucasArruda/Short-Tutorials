@@ -2,7 +2,7 @@
 title: Animate a Sprite in Cocos2D
 slug: animate-sprite-cocos2d
 gamernews_id: 331
----     
+---
 
 # The old way
 
@@ -38,11 +38,11 @@ Here is how to use it:
 
 You only have to be aware of using the same name as you used in your plist for the frame names. If your animation is called *animation_knight* your frames in the .plist need to be called *animation_knight-1.png*, *animation_knight-2.png* and so forth:
 
-![](https://static.makegameswith.us/gamernews_images/rM9Nl7r2Zm/AnimationNames.png)
+![](./AnimationNames.png)
 
 You can download this class for:
 
-*   [Kobold2D 2.x](https://github.com/MakeGamesWithUs/CCAnimatedSprite/archive/v1.0-kobold2D.zip)
-*   [cocos2d 3.x](https://github.com/MakeGamesWithUs/CCAnimatedSprite/archive/v1.0.zip)
+*   [Kobold2D 2.x](https://github.com/MakeSchool/CCAnimatedSprite/archive/v1.0-kobold2D.zip)
+*   [cocos2d 3.x](https://github.com/MakeSchool/CCAnimatedSprite/archive/v1.0.zip)
 
-You can also take a look at the [GitHub repository](https://github.com/MakeGamesWithUs/CCAnimatedSprite) that has an extensive documentation and an example project for cocos2d 3.0.
+You can also take a look at the [GitHub repository](https://github.com/MakeSchool/CCAnimatedSprite) that has an extensive documentation and an example project for cocos2d 3.0.

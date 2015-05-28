@@ -16,7 +16,7 @@ Using Pixelation is very simple. Here is the original image that we used for thi
 
 And here is how it looks in our demo project after applying a *CCEffectPixelate*:
 
-![](./spaceship_pixel)
+![](./spaceship_pixel.png)
 
 ## How does it work?
 

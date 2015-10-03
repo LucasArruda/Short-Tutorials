@@ -11,17 +11,17 @@ Cocos2d 3.0 comes with a completely overhauled touch handling system. This tutor
 *   Working with different touch lifecycle events
 *   Implementing a drag &amp; drop mechanism
 
-# Getting started
+## Getting started
 
 Get started by downloading the [starter project](https://s3.amazonaws.com/mgwu-misc/TouchTutorial/Touch-Handling-Cocos2d-3.0-starter-project.zip). Once you have downloaded the project, you should run it and see this screen:
 
 ![iOS Simular Screenshot](./iOS Simulator Screen shot 04 Feb 2014 13.54.23.png)
 
-# Note for Cocos2D 3.3+
+## Note for Cocos2D 3.3+
 
 If you are using Cocos2D 3.3+ (it's part of SpriteBuilder 1.3+) you will have to replace all occurrences of *UITouch* and *UITouchEvent* with *CCTouch* and *CCTouchEvent*, respectively. You can find more information as part of the [SpriteBuilder update guide](http://www.spritebuilder.com/update).
 
-# Accepting touches
+## Accepting touches
 
 In Cocos2d 3.0 every CCNode and every subclass of CCNode can receive touches. You only need to turn on one option. Let's do that in our custom initializer. Replace the code of the init method in *MainScene.m* with this one:
 
@@ -37,7 +37,7 @@ In Cocos2d 3.0 every CCNode and every subclass of CCNode can receive touches. Yo
 
 Now Cocos2d will know that we want to handle touches in this scene.
 
-# Handling touches
+## Handling touches
 
 Cocos2d informs us about four different types of touch events:
 
@@ -59,7 +59,7 @@ When user interaction is enabled for a Node, all implemented touch handling meth
 
 Now run the app. Every time you touch the screen a "Received a touch" message should appear in the console. Now you know how to receive touches on any Node in your game - that is powerful.
 
-# Retrieving touch locations
+## Retrieving touch locations
 
 The most interesting part of a touch is it's location. In the next step we're going to use the touch location to add a Sprite at every position the player touched. To achieve this we'll need to change the *touchBegan* implementation. Replace the old implementation with this one:
 
@@ -82,7 +82,7 @@ Once you run your project you should be able to place MGWU heroes all over the s
 
 Now that you are familiar with the very basics we will take a closer look at the touch lifecycle and how you can make use of more complex touch handling in your games.
 
-# Making use of the touch lifecycle
+## Making use of the touch lifecycle
 
 Let's enhance our application. Wouldn't it be nicer if a user could touch the screen and drag a hero to a position of his choice and drop it there?
 
@@ -99,7 +99,7 @@ Our new hero placing algorithm shall work as following:
 2.  as long as the user moves his finger over the screen the hero will be moved along
 3.  once the user lifts his finger the hero will be dropped at the last touch position
 
-# Implementing the new hero placement
+## Implementing the new hero placement
 
 First of all we need a variable that holds a reference to the hero we are currently moving, therefore we will add a private instance variable. Modify your *MainScene.m* file.
 
@@ -161,7 +161,7 @@ Now you can build and run your project again. The behaviour should be exactly as
 
 Well done, you're another step closer to mastering touch handling in Cocos2d 3.0!
 
-# Making the hero a touchable object
+## Making the hero a touchable object
 
 There is another feature that would be very useful. A lot of users will want to pickup already existing heroes and move them over the screen. Let's implement the following:
 

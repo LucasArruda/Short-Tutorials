@@ -13,9 +13,9 @@ Cocos2d 3.0 comes with a completely overhauled touch handling system. This tutor
 
 # Getting started
 
-Get started by downloading the [starter project](https://s3.amazonaws.com/mgwu-misc/TouchTutorial/Touch-Handling-Cocos2d-3.0-starter-project.zip). Once you have downloaded project you should run it and see this screen:
+Get started by downloading the [starter project](https://s3.amazonaws.com/mgwu-misc/TouchTutorial/Touch-Handling-Cocos2d-3.0-starter-project.zip). Once you have downloaded the project, you should run it and see this screen:
 
-![](./iOS Simulator Screen shot 04 Feb 2014 13.54.23.png)
+![iOS Simular Screenshot](./iOS Simulator Screen shot 04 Feb 2014 13.54.23.png)
 
 # Note for Cocos2D 3.3+
 
@@ -78,7 +78,7 @@ This implementation is very straightforward. The most interesting part is retrie
 
 Once you run your project you should be able to place MGWU heroes all over the screen:
 
-![](./iOS Simulator Screen shot 04 Feb 2014 14.13.38.png)
+![Place heroes on the screen](./iOS Simulator Screen shot 04 Feb 2014 14.13.38.png)
 
 Now that you are familiar with the very basics we will take a closer look at the touch lifecycle and how you can make use of more complex touch handling in your games.
 
@@ -157,7 +157,7 @@ Our last step is to reset the hero reference when a touch ends or gets cancelled
 
 Now you can build and run your project again. The behaviour should be exactly as outlined in the algorithm and should look like this:
 
-![](./DragHero.gif)
+![Behavior algorithm](./DragHero.gif)
 
 Well done, you're another step closer to mastering touch handling in Cocos2d 3.0!
 
@@ -170,7 +170,7 @@ There is another feature that would be very useful. A lot of users will want to 
 
 To achieve this we need to create a subclass of *CCSprite*. Go ahead and create a class called *CCDragSprite* that inherits from *CCSprite*:
 
-![](./xcode_dragsprite.png)
+![Xcode Dragsprite](./xcode_dragsprite.png)
 
 Add this line to *CCDragSprite.h* to import the Cocos2d headers:
 
@@ -216,7 +216,7 @@ With this line:
 
 Now whenever the user touches the screen our new draggable subclass of *CCSprite* is initialized! Run the project to drag heroes around the screen!
 
-![](./DragHero22.gif)
+![Draggable subclass](./DragHero22.gif)
 
 Well done! By now you should know enough about touch handling in Cocos2d 3.0 to use it in your individual game.
 

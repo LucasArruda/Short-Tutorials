@@ -26,11 +26,11 @@ If you're unfamiliar with minesweeper, we recommend you read the overview: [Wiki
 
 Source code can be found on [GitHub](https://github.com/MakeSchool/mineswifter-demo), and the final app will look like:
 
-![](./swift_tut_01.png)
+![Final mine sweeper game](./swift_tut_01.png)
 
 Open Xcode 6 Beta 4, then create a new project: File —&gt; New Project —&gt; iOS Single View Application —&gt; Language=“Swift”, Devices=“Universal”.
 
-![](./swift_tut_02.png)
+![open xcode](./swift_tut_02.png)
 
 On the first screen that pops up, in the Deployment Info section of the General settings, uncheck the Landscape Left and Landscape Right orientations; this app should run in portrait only.
 
@@ -42,7 +42,7 @@ Drag a “View” component (from the Object Library on the bottom right panel) 
 
 In the Size inspector, set: X=20, Y=129, Width=280, Height=280, and make sure all the Autoresizing masks are turned on, so the view will resize on iPad (click the red lines in the Autoresizing inspector to turn them on).
 
-![](./swift_tut_03.png)
+![Using size inspector in xcode](./swift_tut_03.png)
 
 Drag two new Label components onto the view controller, and align them beneath the board view; one up against the left edge and one on the right. Set the text of the label on the left to “Moves: 0” and the one on the right to “Time: 0”. Change the autoresizing masks of each label. Change the left one to align to the bottom left of the superview, and change the right one to align to the bottom right of the superview; this will make them look nice on iPad as well as iPhone. Also change the text alignment to right for the label on the right, so that it doesn’t trail off the edge of the screen as the text length increases.
 
@@ -50,7 +50,7 @@ Drag in a Navigation Bar component to the top of the view controller, and rename
 
 Now drag a Toolbar component to the bottom of the view controller, and rename the “Item” button as “New Game”
 
-![](./swift_tut_04.png)
+![Dragging a toolbar onto game](./swift_tut_04.png)
 
 That’s it for the interface, now let’s start coding. Open ViewController.swift. The first thing to do is to hook up the user interface we created in the Main.storyboard so that we can access the objects and have the New Game call a method.
 
@@ -68,7 +68,7 @@ Now add an IBAction method that will get called when we press the new game butto
 
 Now go back to Main.storyboard, and open the Assistant editor (the tux like icon in the top right of Xcode) so you can view the ViewController.swift file at the same time. You’ll see an empty circle on the left margin of each line of code with an IBAction or IBOutlet — click on each and drag to the corresponding component in the Storyboard to make a connection.
 
-![](./swift_tut_05.png)
+![Connecting view controller to interface](./swift_tut_05.png)
 
 Run your project now (Cmd+R), and it should compile correctly and display the view controller with the user interface you designed in the Storyboard. Click on the New Game button and you should see the print statement in the console (the bottom right of Xcode window, if you don't see the console you can toggle it on on the top right of xcode). If you choose a different device simulator, you can see it scales correctly between iPhone and iPad resolutions.
 
@@ -295,7 +295,7 @@ Finally, find the default viewDidLoad method in the ViewController class, and ad
 
 Alright, now Build and Run the game by pressing Cmd+R, and you should see a 10x10 grid of buttons “[x]” as their labels! Tapping on them will clear the “[x]” text on their title labels, and will print their position to the console.
 
-![](./swift_tut_06.png)
+![Board with grid](./swift_tut_06.png)
 
 That’s great and all, but it’s not a minesweeper game yet. One thing we can do to make it a lot closer to a finished minesweeper game is to make the buttons display different text when you click on them depending on their isMineLocation and numNeighboringMines properties. Replace the body of the squareButtonPressed method with the following:
 
@@ -323,7 +323,7 @@ This will reveal the contents of a square upon tapping it, only if you haven’t
 
 If you Build and Run the app again, you’ll see that tapping on the buttons changes their text to show a number if they have any neighboring mines, nothing if they have no neighboring mines, or an “M” if they contain a mine.
 
-![](./swift_tut_07.png)
+![Fully functioning game](./swift_tut_07.png)
 
 One quick feature we can finish up is making the New Game button start a new game. This is really simple; just call startNewGame in the newGamePressed method we defined earlier. It should now look like this:
 
@@ -351,7 +351,7 @@ Now let’s implement minePressed to show an alert.
     	alertView.show()
     }
 
-![](./swift_tut_08.png)
+![Modal with new game prompt](./swift_tut_08.png)
 
 Tapping on the New Game button on this alert will dismiss the alertView, but it won’t actually start a new game yet. Add the following method to start a new game when any button on an alertView is pressed:
 
@@ -429,9 +429,9 @@ If you run the app now, it should handle the timer properly in new games. Congra
 
 One neat feature that we’ve built in is cross-compatibility between the iPhone and the iPad, because the positioning of the square buttons is based on the size of the boardView, which scales to fill the screen width. Check out the iPhone and the iPad versions:
 
-![](./swift_tut_09.png)
+![Mineswifter game on iPhone](./swift_tut_09.png)
 
-![](./swift_tut_10.png)
+![Mineswifter game on iPad](./swift_tut_10.png)
 
 There are many features you can add to this app if you want an extra challenge. Here are a few ideas:
 

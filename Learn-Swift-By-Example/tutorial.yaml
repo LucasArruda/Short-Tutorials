@@ -1,6 +1,4 @@
 title: Learn Swift by Example
 cover: cover.png
 teaser_text: |
-    This tutorial provides two components: a simple example App that displays 
-    a user's most recent reddit comments and a tutorial that teaches how to build
-    Minesweeper in Swift!
+    This tutorial shows how to build a simple app that displays a user's most recent reddit comments and teaches you how to build Minesweeper in Swift!

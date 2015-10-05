@@ -50,7 +50,7 @@ The *key* value you pass into the callback is used to ensure that the callback i
 
 With this implementation penguins get stuck to surfaces (or in the air, when the ice blocks fall to the ground) when they collide intensely with other physics objects:
 
-![](./iOS Simulator Screen shot 06 Feb 2014 07.38.08.png)
+![iOS simulator screen](./iOS Simulator Screen shot 06 Feb 2014 07.38.08.png)
 
 You can check out the implementation on [GitHub](https://github.com/MakeSchool/PeevedPenguins-Spritebuilder/tree/change-chipmunk-bodytype)!
 

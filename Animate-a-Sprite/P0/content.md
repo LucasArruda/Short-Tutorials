@@ -38,7 +38,7 @@ Here is how to use it:
 
 You only have to be aware of using the same name as you used in your plist for the frame names. If your animation is called *animation_knight* your frames in the .plist need to be called *animation_knight-1.png*, *animation_knight-2.png* and so forth:
 
-![](./AnimationNames.png)
+![Naming an animation](./AnimationNames.png)
 
 You can download this class for:
 

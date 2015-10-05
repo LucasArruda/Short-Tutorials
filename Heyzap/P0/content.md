@@ -3,24 +3,23 @@ title: Heyzap SDK
 slug: heyzap-sdk
 ---
 
-Introducing Heyzap
-====================
+## Introducing Heyzap
+
 Heyzap is a simple way to monetize your app by adding advertisements. After downloading their SDK and adding the framework to your application, it is easy to show the user ads upon reaching a new level or getting a game over.
 
 Heyzap pays you each time an ad converts to an installation. If someone playing your game installs an app from an advertisement then you will make money.
 
 You can also show rewarded video ads -- ads that offer the user an in-game incentive to watch an advertisement. For example, you could offer a user 100 coins of in-game currency if they watch a 15 second ad.
 
-Making an Account
-====================
+## Making an Account
+
 First things first, you'll need to [make an account with Heyzap](https://www.heyzap.com/register?next=https://developers.heyzap.com/dashboard). Sign up with an account to "Monetize apps."
 
 ![Make an Account](./MakeAnAccount.png)
 
 You do not need to include a URL to your game.
 
-Claiming your App
-====================
+## Claiming your App
 
 You'll next need to claim your application through Heyzap. After creating an account with Heyzap, enter your App Store *Apple ID* (a unique ID number identifying your app) [here](https://developers.heyzap.com/dashboard/games/add_game).
 
@@ -54,8 +53,8 @@ You can do this even if your app has not yet been published to the App Store, by
 
 Once you have your Apple ID, [claim your app here](https://developers.heyzap.com/dashboard/games/add_game).
 
-Adding the Framework
-====================
+## Adding the Framework
+
 Download the Heyzap SDK by [clicking here](https://developers.heyzap.com/sdk/download?platform=iphone).
 
 Unzip the download and navigate to the ```ios-sdk``` folder. In your Xcode project, drag the framework under the Frameworks folder in Xcode project navigator.
@@ -78,8 +77,8 @@ Finally, navigate to the ```AppDelegate.m``` file, and add the following semanti
 	@import MediaPlayer;
 	@import CoreTelephony;
 
-Initializing the SDK
-====================
+## Initializing the SDK
+
 In the ```AppDelegate.m``` file, add the following import line:
 
 	#import <HeyzapAds/HeyzapAds.h>
@@ -98,8 +97,8 @@ You can find your Publisher ID under your[ Account at Heyzap](https://developers
 Build your app before going on, to check for any compiler errors.
 
 
-Displaying Interstitial Ads
-====================
+## Displaying Interstitial Ads
+
 Heyzap's advertisements are interstitial, meaning that they pause update loops and other code running in the background and appear before or after expected content. They take up the whole screen (as opposed to banner advertisements).
 
 In Xcode, open the ```.m``` file of the scene where you will be triggering the ad (between levels or after a game over are good times). At the top, add:
@@ -113,8 +112,8 @@ Now, all you have to do to trigger the ad is the line:
 That's it! The ad is automatically fetched from their server, and gameplay will resume as normal once the user exits out of the advertisement. It will take approximately 5 minutes and 10 impressions before it moves out of "test mode" and beings to display real ads.
 
 
-Displaying Video Ads
-====================
+## Displaying Video Ads
+
 The ```HZInterstitialAd``` class will show both interstitial ads and video ads, depending on which ad is selected by Heyzap's algorithm at the time of showing. This is the recommended option.
 
 However, if you want to force a video ad, you can use the ```HZVideoAd``` class instead. Video ads are best shown only when you expect user sessions to be long. Taking up to 30 seconds away from a 2-5 minute session is a substantial amount of time to ask of users.
@@ -142,8 +141,7 @@ A video ad will only show if there is one ready to be played, otherwise, things 
 
 One thing to note is that while the advertisements will pause your update loops and other scheduled code, they don't pause the background music or sounds being played with ```OALSimpleAudio```, so that is something you need to do manually for video advertisements. Before you call the ```show``` method, pause the background music. You can put the code to unpause the music right after you call the ```show``` method. Make sure you don't turn music on if it was not playing before the video ad though!
 
-Best Practices for Cocos2D
-=========
+## Best Practices for Cocos2D
 
 In general, accidental clicks will only succeed in annoying your users, not in raising conversion rates. You will only make money if the user decides they want to download the advertised app, so when a user accidentally clicks on an advertisement that they have no interest in downloading, you have navigated them away from your game for no reason.
 
@@ -179,7 +177,7 @@ Then, just before you call ```replaceScene``` add this to check if you need to s
 		[HZInterstitialAd show];
 	}
 
-######If your restart does not create a new instance of Gameplay Scene
+###### If your restart does not create a new instance of Gameplay Scene
 That technique *will not work* if you restart the game without creating a new instance of the ```self```, since after the 2 second delay, the self will still have the block scheduled. If the **Restart** button were pressed before the 2 second delay had expired, an ad would pop up in the middle of the game. We need to make sure that the call to ```HZInterstitialAd``` has been unscheduled before restarting the game. Since this is not possible to do with a schedule block, we need to schedule a selector.
 
 We still need to initialize ```BOOL adShown;```. This time, we first create a new method called ```showAd```.
@@ -201,7 +199,7 @@ Now, add the following before where you restart the game:
 		[HZInterstitialAd show];
 	}
 
-####How often to show ads
+#### How often to show ads
 
 When to show the ad is best determined by analyzing analytics. If your game is a fast paced arcade game, with short average sessions, feel free to show ads around once every minute or two. If you have longer, puzzle-based, strategy games, you have more time to monetize a user, so show ads less often. You should also give them more time to play the game before showing the ad, so with long sessions, show the ad late in the experience.
 
@@ -211,8 +209,7 @@ To keep track of how often you have shown ads, try [using a Singleton](http://en
 
 
 
-Displaying Rewarded Video Ads
-====================
+## Displaying Rewarded Video Ads
 
 Heyzap offers two types of video advertisements. There are ads that the user can hit a button to skip (which we just covered with the ```HZVideoAd``` class), as well as 10-15 second unskippable ones for "rewarded video ads," for which we use the ```HZIncentivizedAd``` class.
 

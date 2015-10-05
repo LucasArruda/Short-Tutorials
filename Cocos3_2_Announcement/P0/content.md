@@ -12,11 +12,11 @@ Cocos2D keeps improving and iterating at rapid speed. The Cocos2D 3.2 beta is no
 
 Using Pixelation is very simple. Here is the original image that we used for this demo:
 
-![](./spaceship.png)
+![Spaceship](./spaceship.png)
 
 And here is how it looks in our demo project after applying a *CCEffectPixelate*:
 
-![](./spaceship_pixel.png)
+![Pixelated spaceship](./spaceship_pixel.png)
 
 ## How does it work?
 
@@ -30,7 +30,7 @@ That's it. With *CCEffectPixellate* you can now create retro effects for your ga
 
 The Glass effect is definitely one of the most amazing effects that Cocos2D 3.2 provides. The glass effect reflects and refracts the environment which adds real 3D feel to your 2D game. Here is what the glass effect in our demo looks like:
 
-![](./glassEffect3.gif)
+![Glass effect](./glassEffect3.gif)
 
 You can clearly see how the refraction and the reflection of the background adds a 3D feel to this demo.
 
@@ -46,7 +46,7 @@ In this demo *_crystal* and *_background* are code connections for two *CCSprite
 
 A normal map is an image file that uses different colors to describe the surface of an object. N<span style="">ormal maps are used to simulate 3D effects, such as shadows or refraction of light on a sprite that is actually flat (</span>[more info](http://en.wikipedia.org/wiki/Normal_mapping)<span style="">).</span><span style=""> To create the crystal from the demo above we need two images, one that is actually displayed in the game and another one that is used as a normal map, describing the surface of the crystal. Cocos2D needs to know what the surface of the crystal looks like in order to reflect and refract light correctly. Here are the two images from the demo:</span>
 
-![](./NormalMaps.png)
+![Normal maps](./NormalMaps.png)
 
 On the left side you can see the image displayed in the game. On the right side you can see the normal map used to calculate reflection and refraction. Creating a normal map is the hardest part of using *CCEffectGlass*. After the final release of Cocos2D 3.2 we will discuss tools that help you generate them!
 
@@ -54,7 +54,7 @@ On the left side you can see the image displayed in the game. On the right side 
 
 *CCEffectStack* allows you to combine multiple *CCEffects* and apply them at once. For our example project we have created a *CCEffectStack* that consists of a <span style="">*CCEffectBrightness* and *CCEffectContrast*. Another great feature of *CCEffect* is the ability to change values of *CCEffects* that are already applied. That allows developers to create animations that change parameters of *CCEffects*. Here's the scene from our demo project that uses a *CCEffectStack* and animates the brightness of the *CCEffectBrightness* over time:</span>
 
-![](./brightness.gif)
+![Brightness](./brightness.gif)
 
 ## How does it work?
 

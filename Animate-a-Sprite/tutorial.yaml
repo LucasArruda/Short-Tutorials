@@ -1,4 +1,4 @@
-title: 'Animate a Sprite in Cocos2D'
+title: 'Animate a Sprite in Cocos2D' 
 cover: cover.png
 teaser_text: |
     Discover how to animate a sprite using CCAnimatedSprite and eliminate redundant code from your game.

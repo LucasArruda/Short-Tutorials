@@ -4,6 +4,10 @@ slug: touch-handling-cocos2d-3
 gamernews_id: 366
 ---
 
+> [info]
+>
+> This tutorial is no longer current. Cocos2D 3.3 introduced new classes for touch handling (CCTouch and CCTouchEvent). See [this](http://www.spritebuilder.com/update) for more information.
+
 Cocos2d 3.0 comes with a completely overhauled touch handling system. This tutorial will provide you with all relevant information about working with touches:
 
 *   Accepting touches

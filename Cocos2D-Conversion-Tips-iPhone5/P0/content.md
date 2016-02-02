@@ -81,5 +81,3 @@ One method is to position objects relative to the window size, rather than posit
 Problems will arise where you explicitly set a variable or property as 480 or 320, when what you actually mean is winSize.width or winSize.height. For example, this problem would arise if you want to set a sprite’s position to the corner of the screen, and set its position as (480, 320). That would need to be replaced with (winSize.width, winSize.height).
 
 The reverse is sometimes true, where you use winSize.width/height when you mean 480 or 320 pixels. For example, this problem might crop up in a platformer game where you set the edge of the screen as winSize.width * 2 when you actually mean 960 pixels, which is the actual length of your in-game platform level.
-
-Some of these tips were adapted from [a great discussion here](http://www.cocos2d-iphone.org/forum/topic/39491)
